@@ -1,0 +1,143 @@
+/* Main Content */
+.main-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.course-details {
+  flex: 3;
+}
+
+.course-image {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.course-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.course-author {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.course-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.course-meta {
+  font-size: 14px;
+  color: #888;
+}
+
+.course-learnings,
+.course-content {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.course-learnings li,
+.course-content li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* FAQ Section */
+.faq {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 18px;
+  color: #0073cf;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.faq-question:hover {
+  text-decoration: underline;
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: #666;
+  display: none;
+  padding-left: 10px;
+}
+
+/* Sticky Sidebar */
+.pricing-box {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 330px;
+}
+
+.pricing-container {
+  text-align: center;
+}
+
+.pricing-amount {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btn-enroll {
+  background-color: #0073cf;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-enroll:hover {
+  background-color: #005bb5;
+}
+
+.pricing-info {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

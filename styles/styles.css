@@ -1,0 +1,438 @@
+/* Global styles */
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  background-color: #222222;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo .logo-link {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 1px; /* Adds a bit of sophistication */
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #d73d3d; /* Orange underline effect */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: white; /* Orange color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-item .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Main Dashboard Section */
+.dashboard {
+  padding: 0;
+}
+
+.dashboard-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-container {
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.dashboard-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Dark background with some transparency */
+  border-radius: 10px;
+}
+
+.image-container img {
+  height: 400px;
+  max-width: 1400px;
+}
+
+.image-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.image-overlay p {
+  font-size: 1rem;
+  color: white;
+}
+
+.dashboard-content {
+  margin-top: 0px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 12px;
+  text-align: center;
+}
+
+.dashboard-content h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #333333; /* Dark gray for a professional look */
+  margin-bottom: 10px;
+}
+
+.dashboard-content p {
+  font-size: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #555555;
+}
+
+.dashboard-content p br {
+  margin-top: 10px; /* Space between lines separated by <br> */
+}
+
+.grey-bg {
+  background-color: #f9f9f9;
+}
+
+.why-choose-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 10px;
+  max-width: 1100px; /* Ensures content doesn't span too wide */
+  margin: 0 auto; /* Centers the grid */
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 350px; /* Prevents oversized cards */
+  min-height: 200px; /* Ensures small cards don't look empty */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Keeps spacing balanced */
+}
+
+/* .why-card:hover {
+  transform: translateY(-3px);
+} */
+
+.why-card h3 {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.why-card ul {
+  padding-left: 18px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.why-card ul li {
+  margin-bottom: 10px; /* Keeps bullet points closer to text */
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* Future Section */
+.future-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+.future-content {
+  max-width: 1400px;
+  margin-bottom: 2rem;
+}
+.future-content h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #333333; /* Dark gray for a professional look */
+  margin-bottom: 15px;
+  text-align: center;
+}
+.future-content ul {
+  padding-left: 80px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 2;
+  color: #555555;
+}
+
+/* Course Section */
+.course-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.course-container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.course-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.course-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.course-card p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.course-card ul {
+  padding-left: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+.course-card ul li {
+  margin-bottom: 5px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ec5252;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view-btn:hover {
+  background-color: #d73d3d;
+}
+
+/* Blogs section */
+.custom-blog-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.custom-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.custom-blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.custom-blog-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.custom-blog-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.custom-blog-content {
+  padding: 20px;
+}
+
+.custom-blog-title {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.custom-blog-text {
+  font-size: 1.1rem;
+  text-align: left;
+
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.custom-read-more {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-read-more:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .widget {
+    flex: 1 1 100%; /* Stack widgets on small screens */
+  }
+
+  .carousel-card {
+    flex: 0 0 100%; /* Stack carousel cards on small screens */
+  }
+}
