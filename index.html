@@ -11,13 +11,19 @@
       src="https://kit.fontawesome.com/5873efd01c.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Header Include -->
     <header class="header">
       <div class="header-content">
         <div class="logo">
-          <a href="#" class="logo-link">AutoIntellect</a>
+          <a href="#" class="logo-link">Auto Intellect</a>
         </div>
         <nav class="nav">
           <ul class="nav-list">
@@ -25,7 +31,12 @@
             <li class="nav-item">
               <a href="#courses" class="nav-link">Courses</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item">
+              <a href="/pages/blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="/pages/about.html" class="nav-link">About</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -180,76 +191,102 @@
     </section>
 
     <!-- Blogs Section -->
-    <section class="custom-blog-section">
+    <section class="custom-blog-section" id="blog">
       <div class="custom-container">
-        <h2 class="custom-section-title">Latest Blogs</h2>
+        <div class="custom-title-wrapper">
+          <h2 class="custom-section-title">Our Latest Blogs</h2>
 
-        <div class="custom-blog-wrapper">
-          <!-- Blog 1 -->
-          <div class="custom-blog-card">
-            <img
-              src="images/blog1.jpg"
-              alt="Blog 1"
-              class="custom-blog-image"
-            />
-            <div class="custom-blog-content">
-              <h3 class="custom-blog-title">
-                Navigating the Cybersecurity Terrain in the Automotive Industry:
-                Threats and Challenges
-              </h3>
-              <p class="custom-blog-text">
-                The automotive industry stands at a critical juncture, where the
-                convergence of advanced technologies and connectivity has
-                revolutionized vehicle design and functionality. While this
-                innovation brings numerous benefits,..
-              </p>
-              <a href="#" class="custom-read-more">Read More →</a>
+          <!-- Wrapper for the navigation buttons -->
+          <div class="carousel-buttons-wrapper">
+            <div class="carousel-button-prev">←</div>
+            <div class="carousel-button-next">→</div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+        <div class="custom-blog-slider swiper">
+          <div class="swiper-wrapper">
+            <!-- Blog 1 -->
+            <div class="custom-blog-card swiper-slide">
+              <img
+                src="images/blog1.jpg"
+                alt="Blog 1"
+                class="custom-blog-image"
+              />
+              <div class="custom-blog-content">
+                <span class="custom-blog-category">Web Solution</span>
+                <h3 class="custom-blog-title">
+                  Understanding Functional Safety and ISO 26262 for Automotive
+                  Systems
+                </h3>
+                <a href="#" class="custom-read-more">Read Blog →</a>
+              </div>
             </div>
+            <!-- Blog 2 -->
+            <div class="custom-blog-card swiper-slide">
+              <img
+                src="images/blog2.jpg"
+                alt="Blog 2"
+                class="custom-blog-image"
+              />
+              <div class="custom-blog-content">
+                <span class="custom-blog-category">Web Solution</span>
+                <h3 class="custom-blog-title">
+                  Make a better website solution for your product.
+                </h3>
+                <a href="#" class="custom-read-more">Read Blog →</a>
+              </div>
+            </div>
+            <!-- Blog 1 -->
+            <div class="custom-blog-card swiper-slide">
+              <img
+                src="images/blog1.jpg"
+                alt="Blog 1"
+                class="custom-blog-image"
+              />
+              <div class="custom-blog-content">
+                <span class="custom-blog-category">Web Solution</span>
+                <h3 class="custom-blog-title">
+                  Make a better website solution for your product.
+                </h3>
+                <a href="#" class="custom-read-more">Read Blog →</a>
+              </div>
+            </div>
+            <!-- Blog 1 -->
+            <div class="custom-blog-card swiper-slide">
+              <img
+                src="images/blog1.jpg"
+                alt="Blog 1"
+                class="custom-blog-image"
+              />
+              <div class="custom-blog-content">
+                <span class="custom-blog-category">Web Solution</span>
+                <h3 class="custom-blog-title">
+                  Make a better website solution for your product.
+                </h3>
+                <a href="#" class="custom-read-more">Read Blog →</a>
+              </div>
+            </div>
+            <!-- Blog 1 -->
+            <div class="custom-blog-card swiper-slide">
+              <img
+                src="images/blog1.jpg"
+                alt="Blog 1"
+                class="custom-blog-image"
+              />
+              <div class="custom-blog-content">
+                <span class="custom-blog-category">Web Solution</span>
+                <h3 class="custom-blog-title">
+                  Make a better website solution for your product.
+                </h3>
+                <a href="#" class="custom-read-more">Read Blog →</a>
+              </div>
+            </div>
+
+            <!-- Repeat for Blog 2, 3, 4, etc. -->
           </div>
 
-          <!-- Blog 2 -->
-          <div class="custom-blog-card">
-            <img
-              src="images/blog2.jpg"
-              alt="Blog 2"
-              class="custom-blog-image"
-            />
-            <div class="custom-blog-content">
-              <h3 class="custom-blog-title">
-                Understanding Functional Safety and ISO 26262 for Automotive
-                Systems
-              </h3>
-              <p class="custom-blog-text">
-                In today’s rapidly evolving automotive industry, the complexity
-                of vehicle systems has increased exponentially. With the advent
-                of autonomous driving, electric vehicles, and advanced
-                driver-assistance systems (ADAS), ensuring the safety a...
-              </p>
-              <a href="#" class="custom-read-more">Read More →</a>
-            </div>
-          </div>
-
-          <!-- Blog 3 -->
-          <div class="custom-blog-card">
-            <img
-              src="images/blog3.jpg"
-              alt="Blog 3"
-              class="custom-blog-image"
-            />
-            <div class="custom-blog-content">
-              <h3 class="custom-blog-title">
-                Navigating the Intricacies of Functional Safety in Automotive
-                Systems: A Deep Dive into ISO 26262
-              </h3>
-              <p class="custom-blog-text">
-                In today’s rapidly evolving automotive industry, the complexity
-                of vehicle systems has increased exponentially. With the advent
-                of autonomous driving, electric vehicles, and advanced
-                driver-assistance systems (ADAS), ensuring the safety a...
-              </p>
-              <a href="#" class="custom-read-more">Read More →</a>
-            </div>
-          </div>
+          <!-- Pagination Dots -->
         </div>
       </div>
     </section>
@@ -317,10 +354,9 @@
             <h3>Quick Links</h3>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="blog.html">Blog</a></li>
+              <li><a href="index.html#courses">Courses</a></li>
+              <li><a href="index.html#blog">Blog</a></li>
+              <li><a href="/pages/about.html">About</a></li>
             </ul>
           </div>
 
@@ -358,3 +394,23 @@
     </footer>
   </body>
 </html>
+<script>
+  var swiper = new Swiper(".custom-blog-slider", {
+    slidesPerView: 3, // Number of visible blogs
+    spaceBetween: 20, // Spacing between slides
+    loop: true, // Infinite loop
+    navigation: {
+      nextEl: ".carousel-button-next",
+      prevEl: ".carousel-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: { slidesPerView: 3 },
+      768: { slidesPerView: 2 },
+      480: { slidesPerView: 1 },
+    },
+  });
+</script>

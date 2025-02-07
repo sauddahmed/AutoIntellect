@@ -12,84 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Header */
-.header {
-  background-color: #222222;
-  color: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo .logo-link {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  white-space: nowrap;
-  letter-spacing: 1px; /* Adds a bit of sophistication */
-}
-
-.nav {
-  display: flex;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item .nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
-  position: relative;
-}
-
-.nav-item .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #d73d3d; /* Orange underline effect */
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease;
-}
-
-.nav-item .nav-link:hover {
-  color: white; /* Orange color on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-}
-
-.nav-item .nav-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 /* Main Dashboard Section */
 .dashboard {
   padding: 0;
@@ -125,7 +47,6 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  padding: 20px;
   background-color: rgba(
     0,
     0,
@@ -133,6 +54,7 @@ body {
     0
   ); /* Dark background with some transparency */
   border-radius: 10px;
+  width: 1000px;
 }
 
 .image-container img {
@@ -141,14 +63,18 @@ body {
 }
 
 .image-overlay h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
   color: white;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
 }
 
 .image-overlay p {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
   color: white;
+  text-shadow: 2px 2px 4px black, -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .dashboard-content {
@@ -264,7 +190,7 @@ body {
 
 /* Course Section */
 .course-section {
-  padding: 60px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: center;
 }
@@ -349,38 +275,44 @@ body {
   background-color: #d73d3d;
 }
 
-/* Blogs section */
+/* Blogs Section */
 .custom-blog-section {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
+  padding: 50px 0;
+  background-color: #f9f9f9;
 }
 
 .custom-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.custom-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 30px; /* Keep margin below title */
 }
 
 .custom-section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
 }
 
-.custom-blog-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
+.custom-blog-slider {
+  position: relative;
 }
 
 .custom-blog-card {
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  /* border-radius: 8px; */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
   transition: transform 0.3s ease-in-out;
+  width: 280px;
+  margin-bottom: 20px;
 }
 
 .custom-blog-card:hover {
@@ -389,36 +321,33 @@ body {
 
 .custom-blog-image {
   width: 100%;
-  height: 250px;
+  height: 180px;
   object-fit: cover;
 }
 
 .custom-blog-content {
-  padding: 20px;
+  padding: 15px;
+  text-align: left;
+}
+
+.custom-blog-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777;
 }
 
 .custom-blog-title {
-  font-size: 1.2rem;
-  text-align: left;
+  font-size: 1rem;
   font-weight: 600;
   color: #222;
-  margin-bottom: 10px;
-}
-
-.custom-blog-text {
-  font-size: 1.1rem;
-  text-align: left;
-
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  margin: 5px 0 10px;
 }
 
 .custom-read-more {
-  text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #007bff;
   font-weight: 600;
+  text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
@@ -426,13 +355,58 @@ body {
   color: #0056b3;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .widget {
-    flex: 1 1 100%; /* Stack widgets on small screens */
-  }
+/* Pagination Dots */
+/* .swiper-pagination {
+  position: absolute;
+  bottom: -20px;
+} */
 
-  .carousel-card {
-    flex: 0 0 100%; /* Stack carousel cards on small screens */
-  }
+/* Swiper Arrows */
+.carousel-button-next,
+.carousel-button-prev {
+  position: relative; /* Ensures they align inside the wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000; /* Black border */
+  background: transparent; /* White background */
+  color: #000; /* Black icon */
+  font-size: 18px;
+  border-radius: 4px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+}
+
+/* Fix the button direction */
+.carousel-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.carousel-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+/* Hover Effect */
+.carousel-button-prev:hover {
+  background: #222; /* Dark background */
+  color: white; /* White icon */
+}
+.carousel-button-next:hover {
+  background: #222; /* Dark background */
+  color: white; /* White icon */
+}
+
+/* Wrapper to Position the Buttons */
+.carousel-buttons-wrapper {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  position: relative;
+  top: 0;
+  right: 0;
 }
