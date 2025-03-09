@@ -20,16 +20,37 @@
     <header class="header">
       <div class="header-content">
         <div class="logo">
-          <a href="#" class="logo-link">Auto Intellect</a>
+          <a href="/" class="logo-link">Auto Intellect</a>
         </div>
-        <nav class="nav">
+        <div class="menu-toggle" onclick="toggleMenu(event)">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav" id="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item">
-              <a href="/index.html#courses" class="nav-link">Courses</a>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <!-- Courses Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="javascript:void(0)"
+                class="nav-link dropdown-link active"
+              >
+                Courses <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/pages/course1.html">Vehicle Systems</a></li>
+                <li><a href="/pages/course2.html">ISO 26262</a></li>
+                <li><a href="/pages/cybersecurity.html">Cybersecurity</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="/pages/blog.html" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
-              <a href="/index.html#blog" class="nav-link">Blog</a>
+              <a href="/pages/article.html" class="nav-link">Article</a>
             </li>
             <li class="nav-item">
               <a href="/pages/about.html" class="nav-link">About</a>
@@ -38,16 +59,18 @@
         </nav>
       </div>
     </header>
-    <div class="blog-controls">
-      <button id="prev" class="blog-nav-button" onclick="changeBlog(-1)">
-        <i class="fas fa-chevron-left"></i>
+    <!-- <div class="blog-controls"> -->
+      <!-- <button id="prev" class="blog-nav-button" onclick="changeBlog(-1)"> -->
+        <!-- <i class="fas fa-chevron-left"></i> -->
         <!-- Left Arrow -->
       </button>
-      <button id="next" class="blog-nav-button" onclick="changeBlog(1)">
-        <i class="fas fa-chevron-right"></i>
+      <!-- <button id="next" class="blog-nav-button" onclick="changeBlog(1)">
+        <i class="fas fa-chevron-right"></i> -->
         <!-- Right Arrow -->
-      </button>
-    </div>
+      <!-- </button> -->
+    <!-- </div> -->
+    
+    <h2 class="blogs-header">Blogs</h2>
     <div class="blog-page-container">
       <div id="blog1" class="blog-post blog-post-1 active">
         <h2 class="blog-title">
@@ -494,7 +517,134 @@
           navigate to deliver safe and effective solutions.
         </p>
       </div>
+      <div id="blog4" class="blog-post blog-post-4">
+        <h2 class="blog-title">
+          Honeypots: Unveiling the Tactics of Cyber Adversaries
+        </h2>
+        <img class="blog-page-image" src="/images/blog4.jpg" />
+        <p class="blog-content">
+          As our world becomes increasingly digital, robust cybersecurity measures are more crucial than ever. While traditional security tools form a strong first line of defense, honeypots offer a proactive approach by luring attackers into controlled environments. These decoy systems mimic real vulnerabilities, providing valuable insights into cyber threats and attacker methodologies.
+        </p>
+      
+        <h3>What is a Honeypot?</h3>
+        <p class="blog-content">
+          A honeypot is a deceptive cybersecurity tool—a system intentionally designed to appear as a vulnerable target. Instead of merely blocking attacks, it invites cyber adversaries to interact with it, enabling security teams to observe and analyze their behavior. This intelligence helps identify attack techniques, tools, and objectives, transforming attempted breaches into actionable security insights.
+        </p>
+      
+        <h3>Real-World Example</h3>
+        <p class="blog-content">
+          One notable case of honeypot usage is the Microsoft Digital Crimes Unit (DCU), which deploys honeypots to track botnet operations. By analyzing attacker behaviors, they have successfully dismantled major cybercriminal networks, including the infamous ZeuS botnet.
+        </p>
+      
+        <h3>Types of Honeypots: Crafting the Right Trap</h3>
+        <ol class="blog-content">
+          <li>
+            <strong>Low-Interaction Honeypots:</strong> These simulate specific vulnerabilities or services, such as fake web servers or mock databases. They require minimal resources and maintenance and are primarily used for detecting automated attacks and large-scale scanning.
+          </li>
+          <li>
+            <strong>High-Interaction Honeypots:</strong> These are fully functional environments that allow deeper engagement with attackers. They provide rich intelligence by revealing sophisticated attack strategies, such as a sandboxed system that logs an attacker’s every move.
+          </li>
+        </ol>
+      
+        <h3>Designing an Effective Honeypot</h3>
+        <ul class="blog-content">
+          <li><strong>Isolation:</strong> Ensuring complete separation from production environments to prevent misuse.</li>
+          <li><strong>Realism vs. Effort:</strong> Balancing authenticity with resource investment to attract sophisticated adversaries.</li>
+          <li><strong>Logging and Monitoring:</strong> Implementing robust logging mechanisms to track every interaction in real time.</li>
+          <li><strong>Risk Management:</strong> Restricting outbound traffic to prevent attackers from launching real attacks using the honeypot.</li>
+          <li><strong>Scalability:</strong> Deploying multiple honeypots across different environments to simulate varied attack surfaces.</li>
+        </ul>
+      
+        <h3>The Strategic Benefits of Honeypots</h3>
+        <ul class="blog-content">
+          <li><strong>Early Threat Detection:</strong> Act as an early warning system by luring attackers into monitored traps.</li>
+          <li><strong>Deeper Threat Insights:</strong> Offer detailed intelligence on attack patterns, techniques, and emerging threats.</li>
+          <li><strong>Strategic Diversion:</strong> Redirect attackers away from critical infrastructure, buying time for defensive responses.</li>
+        </ul>
+      
+        <h3>Honeypots in Automotive Cybersecurity (UN R155 Compliance)</h3>
+        <p class="blog-content">
+          With the rise of connected vehicles, cybersecurity regulations like UN R155 mandate robust protection measures. Honeypots play a crucial role in detecting new automotive cyber threats, providing intelligence on system vulnerabilities, and ensuring continuous security updates throughout a vehicle's lifecycle.
+        </p>
+      
+        <h3>Case Study: Tesla's Approach to Cybersecurity</h3>
+        <p class="blog-content">
+          Tesla employs honeypots within their Bug Bounty Program, where ethical hackers attempt to breach their systems. By analyzing these attempts, Tesla strengthens its vehicle security and ensures compliance with industry regulations.
+        </p>
+      
+        <h3>Is a Honeypot Right for Your Organization?</h3>
+        <p class="blog-content">
+          If you want early threat detection, study attacker techniques, and have the resources to maintain honeypots while keeping them isolated from production systems, deploying a honeypot may be a valuable addition to your cybersecurity strategy.
+        </p>
+      
+        <h3>Conclusion: Turning Adversaries into Allies</h3>
+        <p class="blog-content">
+          Honeypots provide a unique, proactive cybersecurity approach by transforming attacks into intelligence. By deploying these deceptive systems, organizations can stay ahead of cyber threats, refine security strategies, and ensure stronger digital defenses.
+        </p>
     </div>
+  </div>
+    <div class="blog-controls">
+      <div class="blog-nav-button" onclick="changeBlog(-1)">←</div>
+      <div class="blog-nav-button" onclick="changeBlog(1)">→</div>
+    </div>
+    <script>
+      // Toggle Menu Function (Open/Close)
+      function toggleMenu(event) {
+        event.stopPropagation();
+        const navMenu = document.getElementById("nav-menu");
+        const icon = document.querySelector(".menu-toggle i");
+
+        // Toggle the nav menu
+        navMenu.classList.toggle("active");
+        icon.classList.toggle("fa-times");
+        icon.classList.toggle("fa-bars");
+
+        // Close dropdown if mobile menu closes
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+        dropdownMenu.classList.remove("show");
+      }
+
+      // Handle Dropdown Toggle
+      const dropdownToggle = document.querySelector(".dropdown-link");
+      dropdownToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // Toggle the dropdown menu
+        dropdownMenu.classList.toggle("show");
+
+        // Prevent closing the entire mobile menu when dropdown opens
+        if (dropdownMenu.classList.contains("show")) {
+          document.getElementById("nav-menu").classList.add("active");
+          document.querySelector(".menu-toggle i").classList.add("fa-times");
+          document.querySelector(".menu-toggle i").classList.remove("fa-bars");
+        }
+      });
+
+      // Close dropdown menu if clicked outside
+      document.addEventListener("click", function (e) {
+        const navMenu = document.getElementById("nav-menu");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // Close dropdown if clicked outside
+        if (
+          !dropdownMenu.contains(e.target) &&
+          !dropdownToggle.contains(e.target)
+        ) {
+          dropdownMenu.classList.remove("show");
+        }
+
+        // Close entire mobile menu if clicked outside
+        if (
+          !navMenu.contains(e.target) &&
+          navMenu.classList.contains("active")
+        ) {
+          navMenu.classList.remove("active");
+          document.querySelector(".menu-toggle i").classList.add("fa-bars");
+          document.querySelector(".menu-toggle i").classList.remove("fa-times");
+        }
+      });
+    </script>
   </body>
   <!-- Footer Section -->
   <footer class="footer">
@@ -561,7 +711,16 @@
 
   function changeBlog(direction) {
     blogs[currentBlog].classList.remove("active");
+
     currentBlog = (currentBlog + direction + blogs.length) % blogs.length;
+    
     blogs[currentBlog].classList.add("active");
+
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 </script>
+

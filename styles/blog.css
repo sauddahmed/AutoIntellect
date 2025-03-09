@@ -15,10 +15,15 @@
   /* box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); */
 }
 
+.blogs-header {
+  text-align: center;
+  font-size: 2rem;
+}
+
 /* Blog Post Styles */
 .blog-post {
   display: none;
-  margin-bottom: 40px;
+  margin-bottom: 0rem;
   padding: 20px;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -55,43 +60,56 @@
   height: 300px;
 }
 
-/* Position buttons outside the container and vertically center them */
 .blog-controls {
-  position: sticky;
-  top: 50%;
-  width: 100%;
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  z-index: 10; /* Ensures buttons are above other content */
+  gap: 2rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  margin-bottom: 3rem;
+  font-size: 2rem;
 }
 
+.blog-nav-button,
 .blog-nav-button {
-  padding: 10px 14px;
-  font-size: 1.5rem;
-  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 18px;
   border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
-  background-color: transparent;
-  color: #007bff;
-  border: none;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
 }
 
+.blog-nav-button::after {
+  font-weight: bold;
+  color: #000;
+}
+
+.blog-nav-button::after {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
 .blog-nav-button:hover {
-  /* background-color: #0056b3; */
-  color: black;
-}
-
-.blog-nav-button:focus {
-  outline: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .blog-page-container {
-    width: 95%;
+    width: 100%;
     padding: 20px;
   }
 
@@ -101,6 +119,10 @@
 
   .blog-content {
     font-size: 1rem;
+  }
+
+  .blog-content li {
+    margin-left: -35px;
   }
 
   .blog-nav-button {

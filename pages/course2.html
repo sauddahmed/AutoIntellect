@@ -20,16 +20,37 @@
     <header class="header">
       <div class="header-content">
         <div class="logo">
-          <a href="#" class="logo-link">Auto Intellect</a>
+          <a href="/" class="logo-link">Auto Intellect</a>
         </div>
-        <nav class="nav">
+        <div class="menu-toggle" onclick="toggleMenu(event)">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav" id="nav-menu">
           <ul class="nav-list">
-            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item">
-              <a href="/index.html#courses" class="nav-link">Courses</a>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <!-- Courses Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="javascript:void(0)"
+                class="nav-link dropdown-link active"
+              >
+                Courses <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/pages/course1.html">Vehicle Systems</a></li>
+                <li><a href="/pages/course2.html">ISO 26262</a></li>
+                <li><a href="/pages/cybersecurity.html">Cybersecurity</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="/pages/blog.html" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
-              <a href="/index.html#blog" class="nav-link">Blog</a>
+              <a href="/pages/article.html" class="nav-link">Article</a>
             </li>
             <li class="nav-item">
               <a href="/pages/about.html" class="nav-link">About</a>
@@ -53,7 +74,7 @@
         <hr />
 
         <h2>Weekend Course for Corporates</h2>
-        <ul>
+        <ul class="course-2-details-left-align">
           <li>ISO 26262</li>
           <ul>
             <li>FuSa Overview/ Need for FuSa/ Basics of CS (3+ hours)</li>
@@ -224,6 +245,64 @@
         $(".faq-question").click(function () {
           $(this).next(".faq-answer").slideToggle();
         });
+      });
+    </script>
+    <script>
+      // Toggle Menu Function (Open/Close)
+      function toggleMenu(event) {
+        event.stopPropagation();
+        const navMenu = document.getElementById("nav-menu");
+        const icon = document.querySelector(".menu-toggle i");
+
+        // Toggle the nav menu
+        navMenu.classList.toggle("active");
+        icon.classList.toggle("fa-times");
+        icon.classList.toggle("fa-bars");
+
+        // Close dropdown if mobile menu closes
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+        dropdownMenu.classList.remove("show");
+      }
+
+      // Handle Dropdown Toggle
+      const dropdownToggle = document.querySelector(".dropdown-link");
+      dropdownToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // Toggle the dropdown menu
+        dropdownMenu.classList.toggle("show");
+
+        // Prevent closing the entire mobile menu when dropdown opens
+        if (dropdownMenu.classList.contains("show")) {
+          document.getElementById("nav-menu").classList.add("active");
+          document.querySelector(".menu-toggle i").classList.add("fa-times");
+          document.querySelector(".menu-toggle i").classList.remove("fa-bars");
+        }
+      });
+
+      // Close dropdown menu if clicked outside
+      document.addEventListener("click", function (e) {
+        const navMenu = document.getElementById("nav-menu");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // Close dropdown if clicked outside
+        if (
+          !dropdownMenu.contains(e.target) &&
+          !dropdownToggle.contains(e.target)
+        ) {
+          dropdownMenu.classList.remove("show");
+        }
+
+        // Close entire mobile menu if clicked outside
+        if (
+          !navMenu.contains(e.target) &&
+          navMenu.classList.contains("active")
+        ) {
+          navMenu.classList.remove("active");
+          document.querySelector(".menu-toggle i").classList.add("fa-bars");
+          document.querySelector(".menu-toggle i").classList.remove("fa-times");
+        }
       });
     </script>
   </body>

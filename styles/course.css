@@ -30,6 +30,10 @@
   margin-bottom: 10px;
 }
 
+.course-details p {
+  color: #666;
+}
+
 .course-description {
   font-size: 16px;
   margin-bottom: 10px;
@@ -140,4 +144,111 @@
   text-align: center;
   padding: 10px;
   margin-top: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 430px) {
+  /* Main Content Single Column */
+  .main-content {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  /* Course Details */
+  .course-details {
+    width: 100%;
+  }
+
+  .course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .course-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .course-2-details-left-align li,
+  .course-2-details-left-align ul {
+    margin-left: -25px;
+    line-height: 1.5;
+  }
+
+  .course-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  /* Move Pricing Block Below Content */
+  .pricing-box {
+    width: 100%;
+    margin-top: 30px;
+    min-height: 380px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .pricing-amount {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .btn-enroll {
+    width: 100%;
+    background-color: #0073cf;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .pricing-features li {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .bullet-points-left-align li {
+    color: #666;
+    margin-bottom: 10px;
+    margin-left: -25px;
+  }
+
+  /* FAQ Section */
+  .faq {
+    margin-top: 20px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  /* Footer Section */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links,
+  .footer-social,
+  .footer-newsletter {
+    margin-bottom: 20px;
+  }
 }

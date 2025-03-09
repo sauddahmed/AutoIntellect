@@ -14,6 +14,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -74,4 +78,49 @@
 .nav-item .nav-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* Active class effect */
+.nav-item .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Dropdown menu */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  list-style: none;
+  padding: 10px 0px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-item.dropdown .dropdown-menu li {
+  padding: 8px 20px;
+  margin-top: 15px;
+}
+
+.nav-item.dropdown .dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item.dropdown .dropdown-menu li a:hover {
+  color: #d73d3d;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }

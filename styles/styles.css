@@ -307,7 +307,7 @@ body {
 
 .custom-blog-card {
   background: #ffffff;
-  /* border-radius: 8px; */
+  border-radius: 8px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   overflow: visible;
   transition: transform 0.3s ease-in-out;
@@ -322,6 +322,9 @@ body {
 .custom-blog-image {
   width: 100%;
   height: 180px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
   object-fit: cover;
 }
 
@@ -409,4 +412,206 @@ body {
   position: relative;
   top: 0;
   right: 0;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 430px) {
+  /* Header Section */
+  .header {
+    padding: 0px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85); /* Dark blurred background */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    transition: right 0.5s ease-in-out;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4); /* Slight shadow on opening */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Slide-in effect */
+  .nav.active {
+    right: 0;
+  }
+
+  /* Modern Styling for List */
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 25px;
+  }
+
+  /* Each Menu Item */
+  .nav-item {
+    margin-bottom: 15px;
+  }
+
+  /* Link Styling */
+  .nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 0px;
+  }
+
+  /* Neon Hover Effect */
+  .nav-item a:hover {
+    color: #f4b400;
+    transform: scale(1.05);
+  }
+
+  /* Close Menu Smooth Effect */
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menu Toggle Button */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Ensure icon changes */
+  .menu-toggle i {
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s;
+  }
+
+  /* Change Menu Icon on Click */
+  .menu-toggle i.fa-times {
+    color: #f4b400;
+    transform: rotate(180deg);
+  }
+
+  /* Close the Menu when Clicking Outside */
+  .nav-item a:active {
+    transform: scale(1);
+  }
+
+  /* Add Soft Drop Shadow to Sidebar */
+  .nav.active {
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Small Bounce Effect on Close */
+  .nav-item a:active {
+    transform: scale(0.95);
+  }
+
+  /* Dropdown */
+  .nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    height: 200px;
+    background-color: #333333;
+    list-style: none;
+    padding: 20px 0px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item.dropdown .dropdown-menu li {
+    padding: 8px 20px;
+    margin-top: 15px;
+  }
+
+  /* Dashboard Section */
+  .dashboard-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-overlay {
+    width: 100%;
+    padding: 20px;
+  }
+  .image-overlay h1 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .image-overlay p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  /* Why Choose Section */
+  .why-choose-section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .why-card {
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  /* Future Section */
+  .future-section {
+    padding: 0 35px;
+  }
+  .future-content ul {
+    padding: 0 10px;
+  }
+
+  /* Blog Section */
+  .custom-blog-section {
+    padding: 0px 10px;
+  }
+  .custom-blog-title {
+    font-size: 12px;
+  }
+  .custom-blog-slider .swiper-slide {
+    width: 90%;
+  }
+
+  /* Course Section */
+  .course-wrapper {
+    flex-direction: column;
+  }
+  .course-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Footer Section */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links,
+  .footer-social,
+  .footer-newsletter {
+    margin-bottom: 20px;
+  }
 }
