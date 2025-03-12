@@ -312,6 +312,10 @@ body {
   overflow: visible;
   transition: transform 0.3s ease-in-out;
   width: 280px;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
@@ -319,20 +323,20 @@ body {
   transform: translateY(-5px);
 }
 
+.custom-blog-content {
+  padding: 15px;
+  text-align: left;
+  height: 125px;
+}
+
 .custom-blog-image {
   width: 100%;
-  height: 180px;
+  height: 300px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 
   object-fit: cover;
 }
-
-.custom-blog-content {
-  padding: 15px;
-  text-align: left;
-}
-
 .custom-blog-category {
   font-size: 0.9rem;
   font-weight: 600;
@@ -340,7 +344,7 @@ body {
 }
 
 .custom-blog-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #222;
   margin: 5px 0 10px;
