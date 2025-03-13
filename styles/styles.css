@@ -291,7 +291,7 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
-  margin: 0 auto 30px; /* Keep margin below title */
+  margin: 0 auto 30px;
 }
 
 .custom-section-title {
@@ -309,13 +309,12 @@ body {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  overflow: visible;
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
   width: 280px;
   display: flex;
   flex-direction: column;
   height: 550px;
-  overflow: hidden;
   margin-bottom: 20px;
 }
 
@@ -323,20 +322,23 @@ body {
   transform: translateY(-5px);
 }
 
-.custom-blog-content {
-  padding: 15px;
-  text-align: left;
-  height: 125px;
-}
-
 .custom-blog-image {
   width: 100%;
   height: 300px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-
   object-fit: cover;
 }
+
+.custom-blog-content {
+  padding: 15px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .custom-blog-category {
   font-size: 0.9rem;
   font-weight: 600;
@@ -347,7 +349,10 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   color: #222;
-  margin: 5px 0 10px;
+  margin: 5px 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .custom-read-more {
@@ -528,7 +533,7 @@ body {
   .nav-item.dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    height: 200px;
+    height: 140px;
     background-color: #333333;
     list-style: none;
     padding: 20px 0px;
@@ -536,7 +541,8 @@ body {
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     top: 100%;
-    right: 0;
+    margin-left: 55px;
+    margin-right: 0;
     z-index: 1000;
     transition: all 0.3s ease;
   }
@@ -589,14 +595,39 @@ body {
   }
 
   /* Blog Section */
-  .custom-blog-section {
-    padding: 0px 10px;
+  .custom-container {
+    padding: 0 15px;
   }
+
+  .custom-title-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .custom-section-title {
+    font-size: 1.5rem;
+  }
+
+  .custom-blog-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-blog-image {
+    height: 250px;
+  }
+
+  .custom-blog-content {
+    padding: 10px;
+  }
+
   .custom-blog-title {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
-  .custom-blog-slider .swiper-slide {
-    width: 90%;
+
+  .custom-read-more {
+    font-size: 0.8rem;
   }
 
   /* Course Section */
