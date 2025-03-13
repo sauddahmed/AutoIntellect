@@ -275,7 +275,7 @@ body {
   background-color: #d73d3d;
 }
 
-/* Blogs Section */
+/* Blog Section */
 .custom-blog-section {
   padding: 50px 0;
   background-color: #f9f9f9;
@@ -284,21 +284,20 @@ body {
 .custom-container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 15px;
 }
 
 .custom-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto 30px;
+  margin-bottom: 30px;
 }
 
 .custom-section-title {
   font-size: 2rem;
   font-weight: 600;
   color: #222;
-  margin-bottom: 30px;
 }
 
 .custom-blog-slider {
@@ -314,7 +313,7 @@ body {
   width: 280px;
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: 100%;
   margin-bottom: 20px;
 }
 
@@ -324,43 +323,56 @@ body {
 
 .custom-blog-image {
   width: 100%;
-  height: 300px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  height: 250px;
   object-fit: cover;
 }
 
 .custom-blog-content {
   padding: 15px;
   text-align: left;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1;
 }
 
-.custom-blog-category {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #777;
+.custom-blog-title-wrapper {
+  height: 60px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .custom-blog-title {
   font-size: 1.2rem;
   font-weight: 600;
   color: #222;
-  margin: 5px 0;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
+/* Category */
+.custom-blog-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777;
+}
+
+/* Read More */
 .custom-read-more {
   font-size: 0.9rem;
   color: #007bff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .custom-read-more:hover {
@@ -595,40 +607,17 @@ body {
   }
 
   /* Blog Section */
-  .custom-container {
-    padding: 0 15px;
-  }
-
-  .custom-title-wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .custom-section-title {
-    font-size: 1.5rem;
-  }
-
-  .custom-blog-card {
-    width: 100%;
-    height: auto;
+  /* .custom-blog-card {
+    height: 100%;
   }
 
   .custom-blog-image {
-    height: 250px;
-  }
-
-  .custom-blog-content {
-    padding: 10px;
-  }
-
-  .custom-blog-title {
-    font-size: 0.8rem;
+    height: 180px;
   }
 
   .custom-read-more {
-    font-size: 0.8rem;
-  }
+    margin-top: 30px;
+  } */
 
   /* Course Section */
   .course-wrapper {
